@@ -27,7 +27,7 @@ summary: 推荐书籍《大型网站技术架构》，本文整理了该书的�
 
 > PS：小编这里有这本书的Kiddle电子版，如有需要可联系我获取哦！
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/lBkCvbGib3D4rca3kHVVaBp6ialC9asHwXkIVGz8iaKyqXbZj6WljbYBvMElohGsyUKNuU0zm43fibu1yoKM4SOmicQ/640?wx_fmt=jpeg)
+![](big-site-architecture/book.jpg)
 
 
 ### 二、架构思路
@@ -197,6 +197,6 @@ summary: 推荐书籍《大型网站技术架构》，本文整理了该书的�
 
 以下是我亲自整理的思维导图:
 
-![](https://mmbiz.qpic.cn/mmbiz_png/lBkCvbGib3D5bdLPxYLWWMcSzNoWhE50InhhPdvA0bhQibCoNZmGwAwNMaSruOGp55EmxVjZhfZd1O3G5icytkIAA/640?wx_fmt=png)
+![](big-site-architecture/xmind.png)
 
 如果上面的大图看着不方便，我也把它放在了Github，访问我的[Github地址](https://github.com/longyg/Study")下载，然后用`XMind`打开轻松看，包括图里的详细标注也可以看得到啦。
