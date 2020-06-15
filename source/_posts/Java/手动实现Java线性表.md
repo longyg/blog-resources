@@ -2,7 +2,7 @@
 title: 手动实现Java线性表
 cover: false
 top: false
-date: 2020-06-14 16:36:00
+date: 2019-11-10 16:36:00
 group: java
 permalink: java-list-impl
 categories: Java后端

@@ -1,6 +1,6 @@
 ---
 title: 干货！史上最详细脑图《大型网站技术架构》
-date: 2020-06-14 12:12:31
+date: 2019-12-14 12:12:31
 group: architecture
 permalink: big-website-architecture
 cover: true
