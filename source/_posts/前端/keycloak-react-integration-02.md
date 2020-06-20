@@ -1,7 +1,7 @@
 ---
 title: Keycloak与React集成应用（下篇）：基于角色的访问控制
-cover: true
-top: true
+cover: false
+top: false
 date: 2019-06-29 22:30:10
 group: frontend
 permalink: keycloak-react-integration-02

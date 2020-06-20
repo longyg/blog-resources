@@ -1,7 +1,7 @@
 ---
 title: windows主机与Docker容器文件夹共享
-cover: true
-top: true
+cover: false
+top: false
 date: 2018-07-28 23:33:58
 group: sharing
 permalink: share-with-host-and-docker
