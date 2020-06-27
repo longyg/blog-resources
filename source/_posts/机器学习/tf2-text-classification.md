@@ -131,7 +131,7 @@ train_labels_batch
 -   [google/tf2-preview/nnlm-en-dim50/1](https://tfhub.dev/google/tf2-preview/nnlm-en-dim50/1)： 一个更大的模型，有大约`1M`的词汇量和`50`个维度。
 -   [google/tf2-preview/nnlm-en-dim128/1](https://tfhub.dev/google/tf2-preview/nnlm-en-dim128/1)：一个更大的模型，有大约`1M`的词汇量和`128`个维度。
 
-  接下来，我们首先创建一个`Keras`层，我们使用`TensorFlow Hub`模型来进行文本嵌入，并对几个输入样本进行测试。注意，无论输入文本的长度如何，文本嵌入的输出形状都是固定的，大小为(`num_examples`, `embedding_dimension`) 。
+接下来，我们首先创建一个`Keras`层，我们使用`TensorFlow Hub`模型来进行文本嵌入，并对几个输入样本进行测试。注意，无论输入文本的长度如何，文本嵌入的输出形状都是固定的，大小为(`num_examples`, `embedding_dimension`) 。
 
 ```python
 embedding = "https://tfhub.dev/google/tf2-preview/gnews-swivel-20dim/1"
@@ -191,7 +191,7 @@ _________________________________________________________________
 2.  第一层输出的固定长度的向量紧接着通过一个有`16`个`隐藏单元`的`全连接`(`Dense`)层。
 3.  最后一层是一个单节点`输出层`，使用`sigmoid`激活函数，这个值是一个介于`0`和`1`之间的浮点数，表示一个概率或`置信级别`。
 
-  接下来我们需要编译模型。
+接下来我们需要编译模型。
 
 #### 选择损失函数和优化器
 
