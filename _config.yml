@@ -5,7 +5,7 @@
 # Site
 title: 龙居雅阁
 subtitle: '专注技术, 追求精彩人生'
-description: '龙居雅阁是一个技术,经验分享的个人博客,分享程序人生,关注Java后端,Python,Go,JavaScript,机器学习,大数据等各种技术'
+description: '龙居雅阁是一个分享技术与经验的个人博客,分享程序人生,关注Java后端,Python,Go,JavaScript,机器学习,大数据等各种技术'
 keywords: '技术博客,程序人生,java,python,javascript,编程,机器学习,深度学习,前端开发,大数据'
 author: yglong
 language: zh-CN
@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://longyg.github.io
+url: http://www.yglong.com
 root: /
 permalink: posts/:group/:title.html
 permalink_defaults:
@@ -130,5 +130,6 @@ theme: matery
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:longyg/longyg.github.io.git
+#  repository: git@github.com:longyg/longyg.github.io.git
+  repository: git@47.113.88.152:/home/git/blog.git
   branch: master
