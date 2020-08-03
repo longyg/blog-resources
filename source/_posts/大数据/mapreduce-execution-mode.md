@@ -1,3 +1,19 @@
+---
+title: MapReduce程序运行模式
+cover: false
+top: false
+date: 2020-08-03 14:09:07
+group: bigdata
+permalink: mapreduce-execution-mode
+categories: 大数据
+tags:
+- MapReduce
+- 大数据
+keywords:
+- MapReduce程序运行模式
+summary: 本文详细介绍了几种MapReduce程序运行模式
+---
+
 MR程序运行方式
 
 

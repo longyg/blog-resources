@@ -1,5 +1,5 @@
 ---
-title: HDFS
+title: HDFS知识点总结
 cover: false
 top: false
 date: 2020-07-22 14:09:07
@@ -10,7 +10,7 @@ tags:
 - HDFS
 - 大数据
 keywords:
-- HDFS介绍
+- HDFS知识点总结
 summary: 本文详细介绍了HDFS
 ---
 
