@@ -130,6 +130,6 @@ theme: matery
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-#  repository: git@github.com:longyg/longyg.github.io.git
-  repository: git@47.113.88.152:/home/git/blog.git
+  repository: git@github.com:longyg/longyg.github.io.git
+#  repository: git@47.113.88.152:/home/git/blog.git
   branch: master
