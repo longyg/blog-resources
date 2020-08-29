@@ -14,8 +14,6 @@ keywords:
 summary: 本文详细介绍了几种MapReduce程序运行模式
 ---
 
-### 前言
-
 ### 一、前言
 
 当开发好`MapReduce`程序后，应该如何运行它来验证程序正确性呢？
@@ -183,11 +181,11 @@ FileOutputFormat.setOutputPath(job, outfile);
 
 在运行程序时，可以提供程序参数，如下，提供了本地路径作为输入和输出路径：
 
-![](E:\workspace\node\blog-resources\source\_posts\大数据\mapreduce-execution-mode\1.png)
+![](mapreduce-execution-mode/1.png)
 
 运行程序后，可以看到结果文件也输出在了指定的本地目录下：
 
-![](E:\workspace\node\blog-resources\source\_posts\大数据\mapreduce-execution-mode\2.png)
+![](mapreduce-execution-mode/2.png)
 
 #### 6. 其他设置
 
@@ -225,13 +223,9 @@ conf.set("fs.defaultFS", "file:///");
 
 如图：
 
-![](E:\workspace\node\blog-resources\source\_posts\大数据\mapreduce-execution-mode\3.png)
-
-
+![](mapreduce-execution-mode/3.png)
 
 综上所述，其实要在本地成功运行`MapReduce`程序，还是有不少坑的，本地环境的配置挺不少的。希望本文能帮助各位少走点弯路，搞定这些配置后，以后就可以开心的在本地开发和调试`MapReduce`程序了。
-
-
 
 ### 四、从Windows本地提交集群运行
 
@@ -245,7 +239,7 @@ conf.set("fs.defaultFS", "file:///");
 
 将集群上任一节点的`$HADOOP_HOME/etc/hadoop`目录下的`core-site.xml`,`hdfs-site.xml`, `yarn-site.xml`, `mapred-site.xml`拷贝到`classpath`中。
 
-![](E:\workspace\node\blog-resources\source\_posts\大数据\mapreduce-execution-mode\4.png)
+![](mapreduce-execution-mode/4.png)
 
 但是，这还不够，以下是笔者在这个过程中遇到的一系列问题以及解决办法，最终还是成功搞定了从本地提交集群运行这一模式。
 
@@ -300,15 +294,15 @@ Exception in thread "main" org.apache.hadoop.security.AccessControlException: Pe
 	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.setPermission(NameNodeRpcServer.java:876)
 ```
 
-`HDFS`目录权限问题。一般是因为在集群上以其他用户运行过`MapReuce`程序，从而以其他用户在`HDFS`中创建了`yarn`相关的目录。而在Windows上执行时，是以计算机用户名来运行的，因此对于HDFS上这个以创建的目录没有访问权限。
+`HDFS`目录权限问题。一般是因为在集群上以其他用户运行过`MapReuce`程序，从而以其他用户在`HDFS`中创建了`yarn`相关的目录。而在Windows上执行时，是以计算机用户名来运行的，因此对于`HDFS`上这个已创建的目录，有可能是没有访问权限的。
 
-暴力点的解决办法，直接把报错的目录设置为`777`，如上报错的目录是`/opt`，所以，直接将`/opt`和子目录全部设置为`777`即可：
+暴力点的解决办法，直接把报错的目录设置为`777`。从上面的异常中，可以看到报错的目录是`/opt`，所以，直接将`/opt`和子目录全部设置为`777`即可：
 
 ```shell
 $ hadoop fs -chmod -R 777 /opt
 ```
 
-#### 3. 问题3：
+#### 3. 问题3
 
 ```java
 Error: java.lang.RuntimeException: java.lang.ClassNotFoundException: Class com.yglong.hadoop.mapred.wordcount.WordCount$TokenizerMapper not found
@@ -333,7 +327,7 @@ job.setJar("C:\\ylong\\workspace\\study\\hadoop\\target\\hadoop-test-0.0.1-SNAPS
 
 这个`jar`包需要在本地先打出来，如使用`maven`打包。其实就是将我们自己开发的所有类，如`Mapper`和`Reducer`类打包到`jar`里，因为这些类在集群中运行时需要被用到。
 
-因此，我们总结一下，要想在本地提交集群运行`MapReduce`程序，需要做如下几个事情：
+因此，我们总结一下，要想从本地提交`MapReduce`程序到集群运行，需要做如下几个事情：
 
 - 拷贝集群配置文件到`classpath`
 - 设置`mapreduce.app-submission.cross-platform`为`true`
