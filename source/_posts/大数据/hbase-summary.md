@@ -727,7 +727,7 @@ create 'test', 'cf1', SPLITS => ['10', '20', '30', '40']
 
    也可以直接下载笔者编译好的zip包：[Phoenix-5.1_HBase-2.2.5](https://github.com/longyg/study/releases/tag/Phoenix-5.1_HBase-2.2.5)
 
-2. 将phoenix-server-xxx.jar包和phoenix-hbase-compat-xxx.jar包拷贝到HBase的lib目录下，然后重启HBase。
+2. 将phoenix-server-5.1.x-xxx.jar包和phoenix-hbase-compat-2.2.x.jar包拷贝到HBase的lib目录下，然后重启HBase。
 
 3. 进入phoenix的bin目录下，执行命令启动phoenix，并进入phoenix的命令行shell：
 
