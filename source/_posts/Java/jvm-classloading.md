@@ -1,3 +1,22 @@
+---
+title: JVM之：类加载
+cover: false
+top: false
+date: 2020-08-24 14:42:49
+group: java
+permalink: jvm-classloading
+categories: Java后端
+tags:
+	- JVM
+	- Java
+keywords:
+	- JVM
+	- 类加载
+summary: 本文详细介绍JVM中关于类加载的知识
+---
+
+
+
 ### 一、类加载
 
 - 在Java代码中，类型（Java Class）的加载、连接与初始化过程都是在程序运行期间完成的。
@@ -23,7 +42,7 @@
 
 - `初始化`：为类的静态变量赋予正确的初始值
 
-![](E:\workspace\node\blog-resources\source\_posts\Java\learn-jvm\1.png)
+![](jvm-classloading/1.png)
 
 #### 3. 类的使用与卸载
 
@@ -39,8 +58,8 @@ Java程序对类的使用方式可分为两种：
   以下`七种情况`都是对类的主动使用：
 
   - 创建类的实例
-  - 访问某个类或接口的静态变量（getstatic），或者对该静态变量赋值（putstatic）
-  - 调用类的静态方法（invokestatic）
+  - 访问某个类或接口的静态变量（`getstatic`），或者对该静态变量赋值（`putstatic`）
+  - 调用类的静态方法（`invokestatic`）
   - 反射（如`Class.forName("com.test.Test")`)
   - 初始化一个类的子类时，是对父类的主动使用
   - Java虚拟机启动时被表明为启动类的类（main方法）
@@ -49,7 +68,7 @@ Java程序对类的使用方式可分为两种：
 
 - `被动使用`
 
-  除了以上七种主动使用的情况，其他使用Java类的方式都被看作对对类的被动使用
+  除了以上七种主动使用的情况，其他使用Java类的方式都被看作对类的被动使用
 
 > **两个重要结论：**
 >
@@ -58,7 +77,7 @@ Java程序对类的使用方式可分为两种：
 
 #### 5. 类的加载
 
-类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在运行时数据区的方法区内，然后在内存中创建一个java.lang.Class对象（规范并未说明Class对象位于哪里，HotSpot虚拟机将其放在了方法区中）用来封装类在方法区内的数据结构。
+类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在运行时数据区的方法区内，然后在内存中创建一个`java.lang.Class`对象（规范并未说明Class对象位于哪里，HotSpot虚拟机将其放在了方法区中）用来封装类在方法区内的数据结构。
 
 ##### 类加载方式
 
@@ -175,9 +194,9 @@ welcome
 
 所有选项都是以`-XX:`开始，有三种类型：
 
-- -XX:+<option>，表示开启option选项
-- -XX:-<option>，表示关闭option选项
-- -XX:<option>=<value>，表示将option选项的值设置为value
+- `-XX:+<option>`，表示开启option选项
+- `-XX:-<option>`，表示关闭option选项
+- `-XX:<option>=<value>`，表示将option选项的值设置为value
 
 ##### 程序实例2
 
